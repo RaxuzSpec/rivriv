@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#080c18">
+  <meta name="description" content="RivRiv kişisel yapay zekâ asistanı">
+  <title>RivRiv AI</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-icon">R</div>
+        <div>
+          <h1>RivRiv<span class="accent">.AI</span></h1>
+          <p>KİŞİSEL ASİSTANIN</p>
+        </div>
+      </div>
+      <div class="status">
+        <span class="status-dot"></span>
+        <span id="connectionStatus">YEREL MOD</span>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="orb-wrap">
+        <div class="orb-ring ring-one"></div>
+        <div class="orb-ring ring-two"></div>
+        <div class="orb">
+          <div class="orb-core"></div>
+        </div>
+        <div class="orb-glow"></div>
+      </div>
+      <h2>Buradayım<span class="accent">.</span></h2>
+      <p id="assistantStatus">Seni dinlemeye hazırım.</p>
+      <button id="voiceButton" class="voice-button" type="button">
+        <span class="mic-icon">♩</span>
+        <span id="voiceButtonText">KONUŞMAYA BAŞLA</span>
+      </button>
+      <p class="tiny-note">Ses özelliği tarayıcı desteğine bağlıdır.</p>
+    </section>
+
+    <section class="chat-section">
+      <div class="section-heading">
+        <span>SOHBET</span>
+        <button id="clearButton" class="text-button" type="button">
+          Temizle
+        </button>
+      </div>
+
+      <div id="messages" class="messages" aria-live="polite">
+      </div>
+
+      <form id="chatForm" class="input-bar">
+        <input
+          id="messageInput"
+          type="text"
+          placeholder="RivRiv'e bir şey sor..."
+          autocomplete="off"
+          maxlength="2000"
+          aria-label="Mesajın"
+        >
+        <button id="sendButton" type="submit" aria-label="Mesajı gönder">
+          ➤
+        </button>
+      </form>
+
+      <div class="quick-actions">
+        <button type="button" data-prompt="Saat kaç?">◷ Saat</button>
+        <button type="button" data-prompt="Bugünün tarihi ne?">▦ Tarih</button>
+        <button type="button" data-prompt="Yardım">✧ Yardım</button>
+      </div>
+    </section>
+
+    <footer>
+      <span>RİVRİV v0.1</span>
+      <span>MAHREMİYET ÖNCELİKLİ</span>
+    </footer>
+  </main>
+</body>
+</html>
